@@ -109,11 +109,15 @@
     // 
     function getInput(id){
         var amount = document.getElementById(id).value;
+        if (isNaN(amount.trim()) || amount.trim() === '') {
+            alert('You can not enter value without number');
+            return depositNumber;
+      } else {
         var withdrawNumber = parseFloat(amount);
-        return withdrawNumber;
+            return withdrawNumber;
+      }
     }
-    document.getElementById("WithdrawBtn")
-    withdrawBtn.addEventListener("click", function(){
+    document.getElementById("withdrawBtn").addEventListener("click", function(){
        var withdrawNumber = getInput("withdrawAmount");
 
         spanTxt("currentWithdraw", withdrawNumber);
