@@ -43,33 +43,60 @@
     <!--       ""    /    ''       -->
     <script>
         var btns = document.querySelectorAll(".btn");
-        document.getElementById("content").style.display ="none";
-        for (let i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function(){
-                btns[i].style.display = "block"
-            });
+        // for (let i = 0; i < btns.length; i++) {
+        //     btns[i].addEventListener("click", function(){
+        //         var content = document.getElementById("content");
+        //         // var flower = document.querySelectorAll("#car");
+        //         // var car = document.querySelectorAll("#flower");
+        //         // var mobile = document.querySelectorAll("#mobile");
+        //         // var all = [...car, ...flower, ...mobile]
+        //         for (let j = 0; j < content.length; j++) {
+        //                 content[j].style.display ="none";
+        //         }
+        //     });
             
-        }
-        // document.getElementById("all").addEventListener("click", function(){
-        //     document.getElementById("car").style.visibility ="visible";
-        //     document.getElementById("mobile").style.visibility ="visible";
-        //     document.getElementById("flower").style.visibility ="visible";
-        // })
-        // document.getElementById("flowers").addEventListener("click", function(){
-        //     document.getElementById("car").style.visibility ="hidden";
-        //     document.getElementById("mobile").style.visibility ="hidden";
-        //     document.querySelector("#flower").style.visibility ="visible"
-        // })
-        // document.getElementById("cars").addEventListener("click", function(){
-        //     document.getElementById("flower").style.visibility ="hidden";
-        //     document.getElementById("mobile").style.visibility ="hidden";
-        //     document.querySelector("#car").style.visibility ="visible"
-        // })
-        // document.getElementById("mobiles").addEventListener("click", function(){
-        //     document.getElementById("car").style.visibility ="hidden";
-        //     document.getElementById("flower").style.visibility ="hidden";
-        //     document.querySelector("#mobile").style.visibility ="visible"
-        // })
+        // }
+        document.getElementById("all").addEventListener("click", function(){
+            document.getElementById("car").style.cssText = `
+            visibility: visible;
+            position: relative;
+            `;
+            document.getElementById("mobile").style.cssText = `
+            visibility: visible;
+            position: relative;
+            `;
+            document.getElementById("flower").style.cssText = `
+            visibility: visible;
+            position: relative;
+            `;
+        })
+        document.getElementById("flowers").addEventListener("click", function(){
+            document.getElementById("car").style.visibility ="hidden";
+            document.getElementById("mobile").style.visibility ="hidden";
+            document.querySelector("#flower").style.cssText = `
+            visibility: visible;
+            position: absolute;
+            top:54px;
+            `;
+        })
+        document.getElementById("cars").addEventListener("click", function(){
+            document.getElementById("flower").style.visibility ="hidden";
+            document.getElementById("mobile").style.visibility ="hidden";
+            document.querySelector("#car").style.cssText = `
+            visibility: visible;
+            position: absolute;
+            top:54px;
+            `;
+        })
+        document.getElementById("mobiles").addEventListener("click", function(){
+            document.getElementById("car").style.visibility ="hidden";
+            document.getElementById("flower").style.visibility ="hidden";
+            document.querySelector("#mobile").style.cssText = `
+            visibility: visible;
+            position: absolute;
+            top:54px;
+            `;
+        })
     </script>
 </body>
 </html>
