@@ -42,7 +42,7 @@
         </div>
     </div>
     <!--       ""    /    ''       -->
-    <script>
+    <!-- <script>
         var btns = document.querySelectorAll(".btn");
         // for (let i = 0; i < btns.length; i++) {
         //     btns[i].addEventListener("click", function(){
@@ -98,6 +98,19 @@
             top:54px;
             `;
         })
+    </script> -->
+    <script>
+        var btns = document.querySelectorAll(".btn");
+        for (let i = 0; i < btns.length; i++) {
+            let thisBtn = btns[i];
+            thisBtn.addEventListener("click", function(){
+            console.log(thisBtn)
+                
+                // const content = document.getElementById("content");
+                
+            });
+            
+        }
     </script>
 </body>
 </html>
